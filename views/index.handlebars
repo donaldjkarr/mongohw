@@ -1,0 +1,24 @@
+<h1>Scrape of Thrones!</h1>
+
+
+    <div id="articleContainer">
+        <ul> 
+   
+            {{#each Articles}}
+            <br>
+                <li>
+                    <div id="posts">
+                        
+                        <a href="https://www.reddit.com{{this.link}}" target="_blank">{{this.title}} </a>
+                            <br>
+                        <button class="commentButton" data-article-id="{{this._id}}">comment</button>
+
+                        <div class="commentArea">{{}}</div>
+
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="notes">{{Comments}}</div>
